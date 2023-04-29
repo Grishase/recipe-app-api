@@ -17,10 +17,14 @@ jobs:
         uses: actions/checkout@v2
       - name: Test
 <<<<<<< HEAD
+<<<<<<< HEAD
         run: docker-compose run --rm app sh -c  "python manage.py wait_for_db && python manage.py test"
 =======
         run: docker-compose run --rm app sh -c  "python3 manage.py app/core/commands/wait_for_db && python3 manage.py test"
 >>>>>>> parent of fe32d90 (Update check.yml)
+=======
+        run: docker-compose run --rm app sh -c  "python3 manage.py app/core/commands/wait_for_db && python3 manage.py test"
+>>>>>>> parent of a56b8b8 (Revert "Update check.yml")
       - name: Lint
         run: docker-compose run --rm app sh -c "flake8"
 
